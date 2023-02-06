@@ -1,44 +1,54 @@
 
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0 auto;
-    padding: 0 ;
-    width: 375px;
-    justify-content: center;
     align-content: center;
     background-color: hsl(257, 40%, 49%);
     background-image: url("./images/bg-mobile.svg");
     background-repeat: no-repeat;
     background-position: right top;
     color: white;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 375px;
+
 }
 
 main {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 .logo {
-    padding: 30px 0 60px 10px;
-    width: 35%;  
     margin-right: auto;
     margin-left: 20px;
+    padding: 30px 0 60px 10px;
+    width: 35%;  
 }
 
+.landing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 .mock {
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
+    width: 80%;
 }
 
+.main-text {
+    text-align: center;
+}
 h1 { 
     font-weight: 500;
     font-size: 30px ;
     margin-top: 50px;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     width: 90%;
 
 }
@@ -47,8 +57,8 @@ p {
     font-family: 'Open Sans', sans-serif;
     font-size: 19px;
     font-weight: 400;
-    margin: 10px 0;
     line-height: 25px;
+    margin: 10px 0;
     padding: 10px;
     text-align: center;
     width: 95%;
@@ -58,22 +68,22 @@ button {
     background: white;
     border: .5px solid #1b1b1b;
     border-radius: 25px;
-    box-shadow: 1px 2px #5f45a1;
-    color: #674baf;
+    color: #674BAF;
+    filter: drop-shadow(4px 4px 1px #473479);
     font-size: 15px;
     font-weight: 300;
     margin-top: 15px;
-    width: 60%;
     padding: 15px;
-
+    width: 60%;
 }
 
 .socials{
-    width: 45%;
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 50px;
+    width: 45%;
+
 }
 
 .socials a {
@@ -82,12 +92,12 @@ button {
 
 
 svg {
-    height: 20px;
-    width: 20px;
-    fill: white;
     border: 1px solid white;
     border-radius: 50%;
+    fill: white;
+    height: 20px;
     padding: 10px;
+    width: 20px;
 }
 
 .attribution { 
@@ -99,3 +109,75 @@ text-align: center;
 color: white; 
 }
 
+@media only screen and (min-width:1200px) {
+    body {
+        background-image: url("./images/bg-desktop.svg");
+        background-position: left;
+        width: 1440px;
+    }
+
+    .logo {
+        padding: 50px 50px 50px 50px;
+        margin: 0 1100px 0 0;
+        width: 15%;
+    }
+    .landing {
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .mock {
+        margin-right: 0;
+        margin-left: 0;
+        width: 55%;
+    }
+
+    .main-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 40%;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin: 0 0 20px 0;
+        text-align: start;
+        width: 100%;
+    }
+
+    p {
+        font-size: 17px;
+        margin: 0 0 10px 0;
+        padding: 0;
+        text-align: start;
+        width: 100%;
+    }
+
+    button {
+        font-size: 17px;
+        width: 35%;
+    }
+
+    button:hover {
+        background: #e882e8;
+        color: white;
+    }
+
+    .socials {
+        margin-right: 100px;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    svg:hover {
+        border: 1px solid #e882e8;
+        fill: #e882e8;
+    }
+
+    .attribution {
+        font-size: 14px;
+    }
+    
+}
